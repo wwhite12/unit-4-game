@@ -49,28 +49,28 @@
         <!--Row of crystals-->
         <div class = "row">
              <div class="col-3">
-                <div class="card" style="width: 12rem; height:200px; background: white; margin-top:20px;">
+                <div class="cardCrystal" id="crystalOne" style="width: 12rem; height:200px; background: white; margin-top:20px;">
                   <div class="card-body">
                     <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fewedit.files.wordpress.com%2F2016%2F01%2Fgeorge-costanza.jpg&w=400&c=sc&poi=face&q=85" alt="crystal one" style="width: 6 rem; height:100px;">
                      </div>
                  </div>
             </div>
             <div class="col-3">
-                    <div class="card" style="width: 12rem; height:200px; background: white; margin-top:20px;">
+                    <div class="cardCrystal" id="crystalTwo" style="width: 12rem; height:200px; background: white; margin-top:20px;">
                       <div class="card-body">
                         <img src = "https://pbs.twimg.com/profile_images/3271214274/95f8ea6440a163639fbcfe4dbea00b00_400x400.jpeg" alt="crystal two" style= "width: 6rem; height: 100px;">
                          </div>
                      </div>
             </div>
             <div class="col-3">
-                    <div class="card" style="width: 12rem; height:200px; background: white; margin-top:20px;">
+                    <div class="cardCrystal" id="crystalThree" style="width: 12rem; height:200px; background: white; margin-top:20px;">
                       <div class="card-body">
                         <img src = "https://img.cinemablend.com/cb/2/8/f/2/6/c/28f26cf2153ea7838fbc1ad310cc2008abcbe98ccf0d80c07d2066f34e579bae.jpg" alt = "crystal three" style ="width:9rem; height:100px;">
                         </div>
                      </div>
             </div>
             <div class="col-3">
-                    <div class="card" style="width: 12rem; height:200px; background: white; margin-top:20px;">
+                    <div class="cardCrystal" id="crystalFour" style="width: 12rem; height:200px; background: white; margin-top:20px;">
                       <div class="card-body">
                             <img src = "https://nypdecider.files.wordpress.com/2019/05/25-best-shows-in-fx-history-always-sunny-winner.jpg?quality=90&strip=all&w=646&h=431&crop=1" alt = "crystal four" style ="width:9rem; height:100px;">
 
@@ -94,10 +94,19 @@
           
           let wins = 0;
           let losses = 0;
+          let userScore=0
           //Generate random number and place it in correct box
-
+          let ranNum = Math.floor((Math.random() * 50) + 1);
+            $("#random-score").text(ranNum);
           //functions: if click on crystal, random number added to user score
-
+            let crystalOne=Math.floor((Math.random() * 10) + 1);
+            let crystalTwo=Math.floor((Math.random() * 10) + 1);
+            let crystalThree=Math.floor((Math.random() * 10) + 1);
+            let crystalFour=Math.floor((Math.random() * 10) + 1);
+            
+            $(".cardCrystal").on("click",function(){
+              console.log(crystalOne);
+            });
           //if: user score === random number-wins++ else if: user score> random number-losses++
       
           });
