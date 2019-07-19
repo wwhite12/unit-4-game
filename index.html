@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <title>Crystal Collector</title>
+</head>
+<body>
+
+        <div class="jumbotron" style = "background:orange">
+                <h1 class="text-center" style = "color:white">Crystal Collector</h1>
+        </div>
+        <div class="card" style = "background: burlywood;">
+                <div class="card-header">
+                  Rules
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p style = "color:green;"> You will be given a random number at the start of the game. <br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. <br>You win the game by matching your total score to random number. You lose the game if your total score goes above the random number.<br>The value of each crystal is hidden from you until you click it.<br>Each time the game starts, the game will change the value of each crystal.</p>
+                  </blockquote>
+                </div>
+        </div>
+
+      <div class = "container">
+
+        <div class="row">
+        <!--card that holds random number-->
+            <div class="col-4">
+                <div class="card" style="width: 18rem; height:200px; background: greenyellow; margin-top:20px;">
+                <div class="card-body">
+                  <h1 class="card-text" id = "random-score">???</h1>
+                </div>
+              </div>
+            </div>
+        <!--wins and losses box-->
+            <div class="col-3">
+                 <div class="card" style="width: 12rem; height:200px; background: cadetblue; margin-top:20px;">
+                     <div class="card-body">
+                     <h2 class="card-text" id = "winScore">Wins: </h2>
+                     <h2 class="card-text" id = "loseScore">Losses: </h2>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!--Row of crystals-->
+        <div class = "row">
+             <div class="col-3">
+                <div class="card" style="width: 12rem; height:200px; background: white; margin-top:20px;">
+                  <div class="card-body">
+                    <h2 class="card-text" id = "winScore">Wins: </h2>
+                   <h2 class="card-text" id = "loseScore">Losses: </h2>
+                     </div>
+                 </div>
+            </div>
+            <div class="col-3">
+                    <div class="card" style="width: 12rem; height:200px; background: white; margin-top:20px;">
+                      <div class="card-body">
+                        <h2 class="card-text" id = "winScore">Wins: </h2>
+                       <h2 class="card-text" id = "loseScore">Losses: </h2>
+                         </div>
+                     </div>
+            </div>
+            <div class="col-3">
+                    <div class="card" style="width: 12rem; height:200px; background: white; margin-top:20px;">
+                      <div class="card-body">
+                        <h2 class="card-text" id = "winScore">Wins: </h2>
+                       <h2 class="card-text" id = "loseScore">Losses: </h2>
+                         </div>
+                     </div>
+            </div>
+            <div class="col-3">
+                    <div class="card" style="width: 12rem; height:200px; background: white; margin-top:20px;">
+                      <div class="card-body">
+                        <h2 class="card-text" id = "winScore">Wins: </h2>
+                       <h2 class="card-text" id = "loseScore">Losses: </h2>
+                         </div>
+                     </div>
+            </div>
+        </div>
+        <!--row containing user score-->
+        <div class="card" style="width: 18rem;">
+                <div class="card-body" id = "userScore">
+                  <h5 class="card-title">Your Score:</h5>
+                  <p class="card-text">0</p>
+                </div>
+        </div>
+      </div>  
+</body>
+</html>
