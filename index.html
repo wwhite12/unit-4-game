@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
+    <script src="assets/javascript/game.js"></script>
     <title>Crystal Collector</title>
 </head>
 <body>
@@ -87,51 +87,5 @@
         </div>
       </div>  
 
-      <script>
-          //document.ready?
-          $(document).ready(function(){
-
-          
-          let wins = 0;
-          let losses = 0;
-          let userScore=0;
-          //Generate random number and place it in correct box
-          let ranNum = Math.floor((Math.random() * 50) + 1);
-            $("#random-score").text(ranNum);
-          //functions: if click on crystal, random number added to user score
-            let crystalOne=Math.floor((Math.random() * 10) + 1);
-            let crystalTwo=Math.floor((Math.random() * 10) + 1);
-            let crystalThree=Math.floor((Math.random() * 10) + 1);
-            let crystalFour=Math.floor((Math.random() * 10) + 1);
-          //on click function
-          $(".cardCrystal").on("click",function(event){
-           const clickID = event.target.id;
-           if(clickID === "firstCrystal"){
-            console.log("first");
-            userScore += crystalOne;
-            $("#yourScore").text(userScore);
-            //add crystalOne to userScore, if = win, if over lose
-            }
-            else if(clickID ==="secondCrystal"){
-              console.log("second");
-              userScore += crystalTwo;
-              $("#yourScore").text(userScore);
-            }
-            else if(clickID ==="thirdCrystal"){
-              console.log("third");
-              userScore += crystalThree;
-              $("#yourScore").text(userScore);
-            }
-            else if(clickID ==="fourthCrystal"){
-              console.log("fourth");
-              userScore += crystalFour;
-              $("#yourScore").text(userScore);
-            }
-          });
-            });
-          //if: user score === random number-wins++ else if: user score> random number-losses++
-      
-         
-      </script>
 </body>
 </html>
