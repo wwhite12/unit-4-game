@@ -81,7 +81,7 @@
         <!--row containing user score-->
         <div class="card" style="width: 18rem;">
                 <div class="card-body" id = "userScore">
-                  <h5 class="card-title">Your Score:</h5>
+                  <h5 class="card-title" id = "yourScore">Your Score:</h5>
                   <p class="card-text"></p>
                 </div>
         </div>
@@ -107,17 +107,27 @@
           $(".cardCrystal").on("click",function(event){
            const clickID = event.target.id;
            if(clickID === "firstCrystal"){
-            console.log("first");}
+            console.log("first");
+            userScore += crystalOne;
+            $("#yourScore").text(userScore);
+            //add crystalOne to userScore, if = win, if over lose
+            }
             else if(clickID ==="secondCrystal"){
               console.log("second");
+              userScore += crystalTwo;
+              $("#yourScore").text(userScore);
             }
             else if(clickID ==="thirdCrystal"){
               console.log("third");
+              userScore += crystalThree;
+              $("#yourScore").text(userScore);
             }
             else if(clickID ==="fourthCrystal"){
               console.log("fourth");
+              userScore += crystalFour;
+              $("#yourScore").text(userScore);
             }
-          })
+          });
             });
           //if: user score === random number-wins++ else if: user score> random number-losses++
       
