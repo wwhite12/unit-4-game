@@ -10,13 +10,17 @@
 
           //initialize game
           function initializeGame(){
-            var crystalOne=Math.floor((Math.random() * 10) + 1);
-            var crystalTwo=Math.floor((Math.random() * 10) + 1);
-            var crystalThree=Math.floor((Math.random() * 10) + 1);
-            var crystalFour=Math.floor((Math.random() * 10) + 1);
-            var ranNum= Math.floor((Math.random() * 50) + 1);
+             crystalOne=Math.floor((Math.random() * 10) + 1);
+             crystalTwo=Math.floor((Math.random() * 10) + 1);
+             crystalThree=Math.floor((Math.random() * 10) + 1);
+             crystalFour=Math.floor((Math.random() * 10) + 1);
+            ranNum= Math.floor((Math.random() * 50) + 1);
+            userScore = 0;
             gameOver = false;
-          }
+
+            $("#random-score").text(ranNum);
+            $("#yourScore").text(userScore);
+          } 
           //Generate random number for target score
           //initialize game: reseting numbers-- .text(random)?
           let ranNum = Math.floor((Math.random() * 50) + 1);
@@ -51,21 +55,25 @@
               userScore += crystalFour;
               $("#yourScore").text(userScore);
             }
-            //if statement for win/loss--similar to calc, need to initialize game with exception of wins.losses.
-            gameOver=true;
+            //if statement for win/loss--similar to calc, need to initialize game with exception of wins/losses.
+            //gameOver=true;
             if(userScore === ranNum ){
               console.log("you win");
               $("#winScore").text("Wins: " + wins++);
-              //return false;
+              alert("you win!");
+              initializeGame();
             }
             else if(userScore > ranNum){
               console.log("you lose");
               $("#loseScore").text("Losses: " + losses++);
-              //return false;
+              alert("You lose");
+              initializeGame();
             }
 
 
           });
+
+          initializeGame();
             });
           //if: user score === random number-wins++ else if: user score> random number-losses++
       
