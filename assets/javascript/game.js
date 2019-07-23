@@ -10,11 +10,11 @@
 
           //initialize game
           function initializeGame(){
-             crystalOne=Math.floor((Math.random() * 10) + 1);
-             crystalTwo=Math.floor((Math.random() * 10) + 1);
-             crystalThree=Math.floor((Math.random() * 10) + 1);
-             crystalFour=Math.floor((Math.random() * 10) + 1);
-            ranNum= Math.floor((Math.random() * 50) + 1);
+             crystalOne=Math.floor((Math.random() * 12) + 1);
+             crystalTwo=Math.floor((Math.random() * 12) + 1);
+             crystalThree=Math.floor((Math.random() * 12) + 1);
+             crystalFour=Math.floor((Math.random() * 12) + 1);
+            ranNum= Math.floor((Math.random() * (120-19+1)) + 19);
             userScore = 0;
             gameOver = false;
 
@@ -23,13 +23,13 @@
           } 
           //Generate random number for target score
           //initialize game: reseting numbers-- .text(random)?
-          let ranNum = Math.floor((Math.random() * 50) + 1);
+          let ranNum = Math.floor((Math.random() * (120-19+1)) + 19);
             $("#random-score").text(ranNum);
           //assign random number to each crystal
-            let crystalOne=Math.floor((Math.random() * 10) + 1);
-            let crystalTwo=Math.floor((Math.random() * 10) + 1);
-            let crystalThree=Math.floor((Math.random() * 10) + 1);
-            let crystalFour=Math.floor((Math.random() * 10) + 1);
+            let crystalOne=Math.floor((Math.random() * 12) + 1);
+            let crystalTwo=Math.floor((Math.random() * 12) + 1);
+            let crystalThree=Math.floor((Math.random() * 12) + 1);
+            let crystalFour=Math.floor((Math.random() * 12) + 1);
           //on click function
           $(".cardCrystal").on("click",function(event){
           //targets ID of each picture on click
@@ -56,7 +56,7 @@
               $("#yourScore").text(userScore);
             }
             //if statement for win/loss--similar to calc, need to initialize game with exception of wins/losses.
-            //gameOver=true;
+            
             if(userScore === ranNum ){
               console.log("you win");
               $("#winScore").text("Wins: " + wins++);
