@@ -3,10 +3,20 @@
           $(document).ready(function(){
 
           //global variables
-          let wins = 0;
+          let wins = 1;
           let losses = 1;
           let userScore=0;
           gameOver = false;
+
+          //initialize game
+          function initializeGame(){
+            var crystalOne=Math.floor((Math.random() * 10) + 1);
+            var crystalTwo=Math.floor((Math.random() * 10) + 1);
+            var crystalThree=Math.floor((Math.random() * 10) + 1);
+            var crystalFour=Math.floor((Math.random() * 10) + 1);
+            var ranNum= Math.floor((Math.random() * 50) + 1);
+            gameOver = false;
+          }
           //Generate random number for target score
           //initialize game: reseting numbers-- .text(random)?
           let ranNum = Math.floor((Math.random() * 50) + 1);
@@ -45,13 +55,13 @@
             gameOver=true;
             if(userScore === ranNum ){
               console.log("you win");
-              $("#winScore").text(wins++);
-              return false;
+              $("#winScore").text("Wins: " + wins++);
+              //return false;
             }
             else if(userScore > ranNum){
               console.log("you lose");
-              $("#loseScore").text(losses++);
-              return false;
+              $("#loseScore").text("Losses: " + losses++);
+              //return false;
             }
 
 
